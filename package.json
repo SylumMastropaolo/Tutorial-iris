@@ -4,7 +4,7 @@
   "description": "",
   "main": "bin/run.js",
   "scripts": {
-    "test": "NODE_ENV=test eslint bin server && nyc mocha --recursive test --exit",
+    "test": "NODE_ENV=test snyk test && eslint bin server && nyc mocha --recursive test --exit",
     "start": "nodemon | ./node_modules/.bin/bunyan"
   },
   "engines": {
@@ -29,6 +29,7 @@
     "mocha": "^5.2.0",
     "nyc": "^13.0.1",
     "should": "^13.2.3",
+    "snyk": "^1.96.0",
     "supertest": "^3.3.0"
   }
 }
